@@ -17,6 +17,9 @@ env:
 permissions:
   contents: write
 
+github_checks:
+  annotations: false
+
 jobs:
   checkLicense:
     name: Check for the Unity license ☑️
