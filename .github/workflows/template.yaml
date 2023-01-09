@@ -1,6 +1,15 @@
 name: GameCI Template 🎮
 
-on: push
+on: 
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+    types: [opened, reopened]
+    branches:
+      - main
+      - develop
 
 env:
   UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
@@ -107,6 +116,7 @@ jobs:
    needs: buildWebGL
    name: Deploy to Github Pages 🚀
    runs-on: ubuntu-latest
+   if: github.event_name == 'push' && github.ref == 'refs/heads/main'
    steps:
      - name: Checkout code
        uses: actions/checkout@v2
