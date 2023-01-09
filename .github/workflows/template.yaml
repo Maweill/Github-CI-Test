@@ -5,6 +5,9 @@ on: push
 env:
   UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
 
+permissions:
+  contents: write
+
 jobs:
   checkLicense:
     name: Check for the Unity license ☑️
