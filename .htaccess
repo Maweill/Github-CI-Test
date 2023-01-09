@@ -1,0 +1,7 @@
+<ifModule mod_headers.c>
+  AddType text/javascript .js.gz
+  AddEncoding gzip .js.gz
+  <FilesMatch "\.js\.gz$">
+    Header set Content-Encoding gzip
+  </FilesMatch>
+</ifModule>
