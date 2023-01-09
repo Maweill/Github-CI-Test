@@ -100,7 +100,7 @@ jobs:
          name: build-StandaloneWindows64
          path: build/StandaloneWindows64
 
- deployPages:
+  deployPages:
    needs: buildWebGL
    name: Deploy to Github Pages 🚀
    runs-on: ubuntu-latest
