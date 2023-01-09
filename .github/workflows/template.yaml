@@ -17,9 +17,6 @@ env:
 permissions:
   contents: write
 
-github_checks:
-  annotations: false
-
 jobs:
   checkLicense:
     name: Check for the Unity license ☑️
@@ -138,3 +135,6 @@ jobs:
        with:
          branch: gh-pages
          folder: build/WebGL
+
+github_checks:
+  annotations: false
